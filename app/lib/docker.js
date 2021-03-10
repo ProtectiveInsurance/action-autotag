@@ -11,6 +11,6 @@ export default class Dockerfile extends Regex {
       root = path.join(root, 'Dockerfile')
     }
 
-    super(root, /LABEL[\s\t]+version=[\t\s+]?[\"\']?([0-9\.]+)[\"\']?/i)
+    super(root, /LABEL[\s\t]+version=[\t\s+]?[\"\']?([0-9\.]+)[\"\']?([a-zA-Z0-9-_]+)/i)
   }
 }
